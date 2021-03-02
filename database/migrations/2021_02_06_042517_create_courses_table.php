@@ -18,7 +18,8 @@ class CreateCoursesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->unique();
+            $table->string('image');
             $table->text('description');
             $table->timestamps();
             
